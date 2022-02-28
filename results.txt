@@ -1,0 +1,494 @@
+
+
+
+--------------------------------------------------------
+Data Description
+--------------------------------------------------------
+Data - Raw judging data
+Means - Mean scores and standard errors per project
+Pair-Wise Winners - Predict odds of a project winning based on the means and standard errors of scores
+Same-Judge Winners - Predict odds of a project winning based on judges that scored both projects.
+
+
+
+--------------------------------------------------------
+Session: JA
+--------------------------------------------------------
+
+Data:
+                Judge   JA2   JA1   JA6   JA7   JA4   JA3
+          Camley, Bob   NaN   NaN   NaN   NaN   NaN   0.0
+          Cerda, Mark 219.0 224.0   0.0 145.0  91.0   0.0
+          Chan, Emily   NaN   NaN   NaN   NaN   NaN   0.0
+            Cook, Tom   NaN 206.0   NaN   NaN   NaN   NaN
+     Creighton, Chris 222.0   NaN   NaN   NaN   NaN   NaN
+        Cronk, Robert 231.0 227.0   NaN   NaN   NaN   NaN
+         Elam, Debora 165.0   NaN   NaN 126.0   NaN   NaN
+      Erickson, Bruce   NaN   NaN   NaN   NaN   NaN   0.0
+      Falldorf, Peter   NaN 144.0 133.0 118.0   NaN 117.0
+            Ho, Derek   NaN   NaN   NaN 151.0   NaN   NaN
+  Hollenbeck, Patrick   NaN   NaN   NaN 154.0   NaN   NaN
+      Kamionka, Lidia   NaN   NaN   NaN   NaN   NaN 148.0
+        Kasley, Kathy   NaN   NaN   NaN   NaN  96.0   NaN
+          Kelley, Tom   NaN   NaN   NaN 121.0   NaN   NaN
+      Lazzari, Jeremy   NaN   NaN 147.0   NaN   NaN   NaN
+     LeMaster, Edward 158.0   NaN   NaN   NaN  52.0   NaN
+       Morgan, Thomas   NaN 184.0 182.0   NaN 126.0   NaN
+        Payne , Sammy   NaN   NaN 182.0   NaN   NaN 105.0
+Piersall, P.E., Chuck 128.0   NaN 201.0  95.0   NaN   NaN
+      Reddan, Charles   NaN   NaN 179.0   NaN   NaN   NaN
+         Ross, Thomas   NaN 135.0   NaN 134.0   NaN   NaN
+     Rubin, Dr. Steve   NaN 156.0   NaN 110.0   NaN   NaN
+         Ruddy, Joyce 198.0 154.0 198.0 100.0  73.0   NaN
+       Rudnick, Chris   NaN   NaN   NaN   NaN  73.0   NaN
+    Stephens, Jeffrey   NaN   NaN   NaN   NaN   NaN   0.0
+        Sullivan, Pat 196.0 190.0   NaN 116.0 142.0  97.0
+        Young, Monica   NaN 217.0   NaN   NaN  88.0   NaN
+
+Means:
+Project       Mean    StdErr
+    JA2 193.000000 10.893423
+    JA1 184.375000 10.766909
+    JA6 170.166667 10.084366
+    JA7 124.555556  5.467355
+    JA4  91.166667  7.972522
+    JA3  45.571429 21.594595
+
+Pair-Wise Winners:
+Project1 Project2      Mean1   StdErr1      Mean2   StdErr2   MeanDiff  StdErrDiff    ZDiff   P1Wins
+     JA2      JA1 193.000000 10.893423 184.375000 10.766909   8.625000   15.316429 0.563121 0.713324
+     JA2      JA6 193.000000 10.893423 170.166667 10.084366  22.833333   14.844565 1.538161 0.937995
+     JA2      JA7 193.000000 10.893423 124.555556  5.467355  68.444444   12.188463 5.615510 1.000000
+     JA2      JA4 193.000000 10.893423  91.166667  7.972522 101.833333   13.499177 7.543670 1.000000
+     JA2      JA3 193.000000 10.893423  45.571429 21.594595 147.428571   24.186633 6.095457 1.000000
+     JA1      JA6 184.375000 10.766909 170.166667 10.084366  14.208333   14.751976 0.963148 0.832263
+     JA1      JA7 184.375000 10.766909 124.555556  5.467355  59.819444   12.075525 4.953776 1.000000
+     JA1      JA4 184.375000 10.766909  91.166667  7.972522  93.208333   13.397293 6.957251 1.000000
+     JA1      JA3 184.375000 10.766909  45.571429 21.594595 138.803571   24.129916 5.752344 1.000000
+     JA6      JA7 170.166667 10.084366 124.555556  5.467355  45.611111   11.471112 3.976172 0.999965
+     JA6      JA4 170.166667 10.084366  91.166667  7.972522  79.000000   12.855176 6.145384 1.000000
+     JA6      JA3 170.166667 10.084366  45.571429 21.594595 124.595238   23.833191 5.227804 1.000000
+     JA7      JA4 124.555556  5.467355  91.166667  7.972522  33.388889    9.667114 3.453863 0.999724
+     JA7      JA3 124.555556  5.467355  45.571429 21.594595  78.984127   22.275963 3.545711 0.999804
+     JA4      JA3  91.166667  7.972522  45.571429 21.594595  45.595238   23.019288 1.980741 0.976190
+
+Same Judge Winners:
+Project1 Project2  NJudges   MeanDiff  StdErrDiff    ZDiff   P1Wins
+     JA2      JA3        2 159.000000   60.000000 2.650000 0.995975
+     JA1      JA3        3 114.666667   57.891661 1.980711 0.976188
+     JA2      JA4        4 103.250000   17.123935 6.029572 1.000000
+     JA1      JA4        5  89.800000   17.661823 5.084413 1.000000
+     JA4      JA3        2  68.000000   23.000000 2.956522 0.998444
+     JA2      JA7        5  64.800000   12.439453 5.209232 1.000000
+     JA7      JA3        3  55.000000   45.299007 1.214155 0.887656
+     JA2      JA6        3  48.666667   87.735081 0.554700 0.710450
+     JA1      JA6        4  48.250000   59.808549 0.806741 0.790092
+     JA1      JA7        6  46.666667   12.054506 3.871305 0.999946
+     JA6      JA3        3  31.000000   23.459184 1.321444 0.906823
+     JA6      JA4        3  30.000000   63.694584 0.470998 0.681179
+     JA6      JA7        4  18.500000   58.253040 0.317580 0.624598
+     JA7      JA4        3  18.333333   23.497045 0.780240 0.782375
+     JA2      JA1        4  12.250000   10.850307 1.129000 0.870551
+
+
+
+--------------------------------------------------------
+Session: JB
+--------------------------------------------------------
+
+Data:
+                Judge   JB5   JB4   JB6   JB3   JB1   JB2
+       Bellew, Nathan   NaN   NaN 164.0   NaN   NaN   0.0
+     Bigbee , Anthony   NaN   NaN   NaN 133.0   NaN   NaN
+          Chan, Emily   NaN   NaN 117.0   NaN   NaN   NaN
+       Claus, Bradley   NaN 134.0   NaN   NaN   NaN   NaN
+            Cook, Tom   NaN   NaN 114.0   NaN   NaN   NaN
+     Creighton, Chris   NaN   NaN   NaN   NaN 129.0   NaN
+        Cronk, Robert   NaN   NaN   NaN  84.0   NaN   NaN
+       Furstenau, Ron   NaN   NaN   NaN 139.0   NaN   NaN
+       Heinrich, Mark   NaN 134.0   0.0   NaN   NaN  67.0
+            Ho, Derek   NaN   NaN   NaN  99.0   NaN   NaN
+  Hollenbeck, Patrick 116.0 145.0 158.0 140.0   NaN 116.0
+      Kamionka, Lidia 124.0   NaN   NaN   NaN   NaN   NaN
+        Kasley, Kathy   NaN 131.0   NaN 106.0   NaN   NaN
+          Kelley, Tom 176.0 180.0 149.0 107.0 111.0 107.0
+         Lamb, Sandra   NaN   NaN   NaN  91.0  83.0   NaN
+      Lazzari, Jeremy   NaN   NaN   NaN   NaN 112.0 131.0
+     LeMaster, Edward   NaN 129.0  67.0   NaN   NaN   NaN
+       Morgan, Thomas 152.0   NaN   NaN   NaN   NaN   NaN
+         Mueller, Tim 185.0   NaN 182.0 191.0 144.0 156.0
+          Olsen, Jeff 162.0   NaN   NaN   NaN   NaN   NaN
+Piersall, P.E., Chuck   NaN 146.0 112.0   NaN   NaN   NaN
+      Reddan, Charles   NaN   NaN   NaN   NaN   NaN  80.0
+ Reeves-Pepin, Jaclyn 169.0 166.0   NaN   NaN   NaN   NaN
+         Ross, Thomas   NaN   NaN 106.0   NaN   NaN   NaN
+        Schene , Tony 115.0   NaN   NaN   NaN  96.0 104.0
+    Stephens, Jeffrey   NaN   NaN   NaN   NaN   NaN 121.0
+      Stricklan, Lynn   NaN 151.0   NaN   NaN  92.0   NaN
+        Sullivan, Pat   NaN   NaN   NaN   NaN   NaN 102.0
+        Young, Monica 138.0 174.0   NaN 107.0  88.0  95.0
+
+Means:
+Project       Mean    StdErr
+    JB5 148.142857  8.642168
+    JB4 147.625000  5.512769
+    JB6 123.375000 11.373430
+    JB3 115.250000  6.768493
+    JB1 104.666667  6.322798
+    JB2 102.555556  6.648122
+
+Pair-Wise Winners:
+Project1 Project2      Mean1   StdErr1      Mean2   StdErr2  MeanDiff  StdErrDiff    ZDiff   P1Wins
+     JB5      JB4 148.142857  8.642168 147.625000  5.512769  0.517857   10.250741 0.050519 0.520146
+     JB5      JB6 148.142857  8.642168 123.375000 11.373430 24.767857   14.284327 1.733918 0.958534
+     JB5      JB3 148.142857  8.642168 115.250000  6.768493 32.892857   10.977230 2.996462 0.998634
+     JB5      JB1 148.142857  8.642168 104.666667  6.322798 43.476190   10.708168 4.060096 0.999975
+     JB5      JB2 148.142857  8.642168 102.555556  6.648122 45.587302   10.903422 4.181009 0.999985
+     JB4      JB6 147.625000  5.512769 123.375000 11.373430 24.250000   12.639048 1.918657 0.972486
+     JB4      JB3 147.625000  5.512769 115.250000  6.768493 32.375000    8.729440 3.708714 0.999896
+     JB4      JB1 147.625000  5.512769 104.666667  6.322798 42.958333    8.388588 5.121045 1.000000
+     JB4      JB2 147.625000  5.512769 102.555556  6.648122 45.069444    8.636443 5.218519 1.000000
+     JB6      JB3 123.375000 11.373430 115.250000  6.768493  8.125000   13.235083 0.613899 0.730359
+     JB6      JB1 123.375000 11.373430 104.666667  6.322798 18.708333   13.012789 1.437688 0.924739
+     JB6      JB2 123.375000 11.373430 102.555556  6.648122 20.819444   13.173930 1.580352 0.942987
+     JB3      JB1 115.250000  6.768493 104.666667  6.322798 10.583333    9.262304 1.142624 0.873403
+     JB3      JB2 115.250000  6.768493 102.555556  6.648122 12.694444    9.487362 1.338037 0.909558
+     JB1      JB2 104.666667  6.322798 102.555556  6.648122  2.111111    9.174710 0.230101 0.590993
+
+Same Judge Winners:
+Project1 Project2  NJudges  MeanDiff  StdErrDiff    ZDiff   P1Wins
+     JB4      JB1        3 71.333333    7.881060 9.051236 1.000000
+     JB4      JB2        4 62.000000   11.269428 5.501610 1.000000
+     JB4      JB6        5 49.600000   24.274678 2.043281 0.979488
+     JB5      JB1        4 43.750000    9.620941 4.547372 0.999997
+     JB4      JB3        4 42.500000   16.439282 2.585271 0.995135
+     JB6      JB2        5 41.400000   36.755408 1.126365 0.869994
+     JB6      JB1        2 38.000000    0.000000      NaN      NaN
+     JB5      JB2        5 30.400000   12.147428 2.502587 0.993836
+     JB3      JB2        4 17.750000    7.553972 2.349757 0.990607
+     JB3      JB1        4 17.500000   10.897247 1.605910 0.945853
+     JB5      JB3        4 17.500000   20.633710 0.848127 0.801816
+     JB6      JB3        3 17.000000   14.730920 1.154035 0.875757
+     JB4      JB5        4 16.500000    9.456039 1.744917 0.959500
+     JB2      JB1        5  8.400000    3.749667 2.240199 0.987461
+     JB6      JB5        3  4.000000   20.223748 0.197787 0.578394
+
+
+
+--------------------------------------------------------
+Session: JC
+--------------------------------------------------------
+
+Data:
+                     Judge   JC6   JC2   JC7   JC4   JC3   JC1
+            Bellew, Nathan   NaN 178.0 184.0 146.0   NaN 128.0
+               Chan, Emily 172.0   NaN   NaN   NaN   NaN   NaN
+            Claus, Bradley 121.0 141.0 112.0 105.0 118.0  77.0
+                 Cook, Tom   NaN   NaN 112.0   NaN   NaN   NaN
+Creighton, Chris −−−−− 126   NaN   NaN   NaN   NaN   NaN   NaN
+             Cronk, Robert 156.0   NaN   NaN   NaN 108.0   NaN
+              Elam, Debora   NaN   NaN   NaN 107.0   NaN   NaN
+          Furstenau, Julie   NaN   NaN   NaN   NaN 101.0   NaN
+            Heinrich, Mark 142.0   NaN   NaN   NaN   NaN   NaN
+           Kamionka, Lidia   NaN 153.0   NaN 151.0   NaN  62.0
+             Kasley, Kathy   NaN   NaN 146.0   NaN   NaN   NaN
+                Kent, Chip   NaN   NaN   NaN   NaN   NaN  35.0
+              Lamb, Sandra   NaN   NaN   NaN 121.0  98.0  64.0
+           Lazzari, Jeremy 166.0   NaN   NaN   NaN   NaN   NaN
+            Morgan, Thomas   NaN   NaN   NaN   NaN 136.0   NaN
+              Mueller, Tim   NaN   NaN   NaN   NaN   NaN 175.0
+               Olsen, Jeff 191.0 153.0 158.0 109.0 104.0 110.0
+             Payne , Sammy 163.0 142.0 105.0  94.0   NaN   NaN
+     Piersall, P.E., Chuck   NaN   NaN 105.0   NaN   NaN   NaN
+           Reddan, Charles 153.0   NaN 100.0  64.0   NaN   NaN
+              Ross, Thomas   NaN 123.0 113.0   NaN   NaN   NaN
+          Rubin, Dr. Steve   NaN 103.0   NaN   NaN   NaN  55.0
+              Ruddy, Joyce   NaN   NaN   NaN  97.0   NaN   NaN
+            Rudnick, Chris   NaN   NaN   NaN   NaN  82.0   NaN
+             Schene , Tony 175.0 109.0 140.0   NaN 107.0   NaN
+         Stephens, Jeffrey 194.0 133.0   NaN 146.0 152.0 122.0
+           Stricklan, Lynn 156.0   NaN 129.0 100.0 114.0   NaN
+             Sullivan, Pat   NaN 128.0   NaN   NaN   NaN   NaN
+
+Means:
+Project       Mean    StdErr
+    JC6 163.777778  4.789392
+    JC2 135.250000  5.354404
+    JC7 124.444444  6.508778
+    JC4 113.888889  6.600599
+    JC3 110.750000  4.279311
+    JC1  88.285714 11.651107
+
+Pair-Wise Winners:
+Project1 Project2      Mean1  StdErr1      Mean2   StdErr2  MeanDiff  StdErrDiff    ZDiff   P1Wins
+     JC6      JC2 163.777778 4.789392 135.250000  5.354404 28.527778    7.183865 3.971091 0.999964
+     JC6      JC7 163.777778 4.789392 124.444444  6.508778 39.333333    8.080994 4.867388 0.999999
+     JC6      JC4 163.777778 4.789392 113.888889  6.600599 49.888889    8.155132 6.117484 1.000000
+     JC6      JC3 163.777778 4.789392 110.750000  4.279311 53.027778    6.422676 8.256337 1.000000
+     JC6      JC1 163.777778 4.789392  88.285714 11.651107 75.492063   12.597086 5.992820 1.000000
+     JC2      JC7 135.250000 5.354404 124.444444  6.508778 10.805556    8.428158 1.282078 0.900092
+     JC2      JC4 135.250000 5.354404 113.888889  6.600599 21.361111    8.499267 2.513289 0.994019
+     JC2      JC3 135.250000 5.354404 110.750000  4.279311 24.500000    6.854352 3.574371 0.999824
+     JC2      JC1 135.250000 5.354404  88.285714 11.651107 46.964286   12.822556 3.662631 0.999875
+     JC7      JC4 124.444444 6.508778 113.888889  6.600599 10.555556    9.269957 1.138684 0.872583
+     JC7      JC3 124.444444 6.508778 110.750000  4.279311 13.694444    7.789525 1.758059 0.960631
+     JC7      JC1 124.444444 6.508778  88.285714 11.651107 36.158730   13.345879 2.709355 0.996629
+     JC4      JC3 113.888889 6.600599 110.750000  4.279311  3.138889    7.866410 0.399024 0.655062
+     JC4      JC1 113.888889 6.600599  88.285714 11.651107 25.603175   13.390900 1.911983 0.972061
+     JC3      JC1 110.750000 4.279311  88.285714 11.651107 22.464286   12.412123 1.809866 0.964842
+
+Same Judge Winners:
+Project1 Project2  NJudges  MeanDiff  StdErrDiff    ZDiff   P1Wins
+     JC6      JC1        3 65.666667   11.140517 5.894400 1.000000
+     JC6      JC4        6 60.000000   10.804320 5.553334 1.000000
+     JC2      JC1        6 51.166667   10.712661 4.776280 0.999999
+     JC6      JC3        6 48.333333   11.571997 4.176750 0.999985
+     JC7      JC1        3 46.333333    6.119187 7.571812 1.000000
+     JC4      JC1        6 35.833333   13.103223 2.734696 0.996878
+     JC6      JC7        6 35.833333    7.286593 4.917707 1.000000
+     JC6      JC2        5 33.200000   15.573696 2.131800 0.983488
+     JC7      JC4        6 28.333333    6.671665 4.246816 0.999989
+     JC2      JC4        6 24.833333   10.054573 2.469855 0.993242
+     JC3      JC1        4 24.750000   10.499008 2.357366 0.990797
+     JC7      JC3        4 24.000000   12.786712 1.876949 0.969737
+     JC2      JC3        4 13.750000   14.545188 0.945330 0.827755
+     JC2      JC7        6  5.666667   10.229587 0.553949 0.710193
+     JC3      JC4        5  1.000000    6.892024 0.145095 0.557682
+
+
+
+--------------------------------------------------------
+Session: JD
+--------------------------------------------------------
+
+Data:
+                Judge   JD2   JD4   JD1
+      Anderson, David   NaN   NaN  81.0
+       Bellew, Nathan   NaN   NaN 137.0
+     Creighton, Chris 212.0 183.0   NaN
+        Cronk, Robert   NaN 196.0 184.0
+       Furstenau, Ron 130.0   NaN 131.0
+           Kent, Chip   NaN 176.0 103.0
+         Lamb, Sandra 177.0 102.0 142.0
+      Lazzari, Jeremy   NaN  91.0   NaN
+     LeMaster, Edward  86.0 120.0  31.0
+         Leupp, David 171.0   NaN  81.0
+       Morgan, Thomas 110.0 143.0   NaN
+         Mueller, Tim 212.0   NaN   NaN
+          Olsen, Jeff 160.0   NaN   NaN
+       Pa yne , Sammy 164.0   NaN   NaN
+Piersall, P.E., Chuck   NaN 165.0 111.0
+         Ross, Thomas 170.0   NaN 175.0
+       Rudnick, Chris   NaN 125.0   NaN
+        Schene , Tony 185.0   NaN   NaN
+      Stricklan, Lynn 168.0   NaN   NaN
+        Young, Monica   NaN 190.0   NaN
+
+Means:
+Project    Mean    StdErr
+    JD2 164.700  8.880753
+    JD4 150.500 11.546490
+    JD1 120.125 11.441524
+
+Pair-Wise Winners:
+Project1 Project2  Mean1   StdErr1   Mean2   StdErr2  MeanDiff  StdErrDiff    ZDiff   P1Wins
+     JD2      JD4  164.7  8.880753 150.500 11.546490    14.200   14.566716 0.974825 0.835176
+     JD2      JD1  164.7  8.880753 120.125 11.441524    44.575   14.483655 3.077607 0.998957
+     JD4      JD1  150.5 11.546490 120.125 11.441524    30.375   16.255150 1.868639 0.969163
+
+Same Judge Winners:
+Project1 Project2  NJudges  MeanDiff  StdErrDiff    ZDiff   P1Wins
+     JD4      JD1        5     37.60   23.282182 1.614969 0.946841
+     JD2      JD1        5     34.80   17.777514 1.957529 0.974857
+     JD2      JD4        4      9.25   26.408253 0.350269 0.636932
+
+
+
+--------------------------------------------------------
+Session: SA
+--------------------------------------------------------
+
+Data:
+               Judge   SA1   SA6   SA3   SA2   SA5   SA4
+     Anderson, David 162.0 112.0 147.0   NaN   NaN   NaN
+      Bellew, Nathan   NaN   NaN   NaN   NaN   NaN 163.0
+         Camley, Bob   NaN 146.0   NaN 118.0 105.0   NaN
+         Cerda, Mark 190.0   NaN   NaN   NaN   NaN   NaN
+      Claus, Bradley   NaN   NaN 175.0   NaN   NaN   NaN
+           Cook, Tom 193.0   NaN   NaN 130.0 139.0 117.0
+    Creighton, Chris   NaN   NaN   NaN 165.0   NaN   NaN
+       Cronk, Robert 182.0   NaN   NaN   NaN   NaN   NaN
+   DellArio, Michael   NaN 150.0   NaN  68.0   NaN  87.0
+        Elam, Debora   NaN   NaN   NaN   NaN 126.0   NaN
+     Erickson, Bruce   NaN 196.0 182.0 149.0 137.0   0.0
+    Furstenau, Julie 188.0   NaN   NaN   NaN 121.0 119.0
+      Furstenau, Ron 206.0   NaN 164.0 143.0   NaN   NaN
+      Heinrich, Mark   NaN   NaN 148.0 108.0 124.0   NaN
+           Ho, Derek 167.0 175.0   0.0   NaN 125.0   0.0
+ Hollenbeck, Patrick   NaN   NaN   NaN   NaN   NaN 128.0
+     Kamionka, Lidia   NaN   NaN 209.0   NaN   NaN   NaN
+       Kasley, Kathy 179.0 130.0   NaN   NaN 136.0   NaN
+          Kent, Chip   NaN   NaN   NaN 119.0 134.0   NaN
+     Lazzari, Jeremy   NaN   NaN   NaN 133.0   NaN 151.0
+        Leupp, David   NaN 129.0   NaN   NaN   NaN   NaN
+        Mueller, Tim 235.0   NaN   NaN   NaN   NaN   NaN
+       Payne , Sammy   NaN   NaN   NaN   NaN   NaN 140.0
+     Reddan, Charles   NaN   NaN  98.0   NaN   NaN   NaN
+Reeves-Pepin, Jaclyn 212.0   NaN   NaN   NaN   NaN 169.0
+        Ruddy, Joyce   NaN   NaN 139.0   NaN   NaN   NaN
+      Rudnick, Chris   NaN   NaN   NaN 163.0   NaN   NaN
+   Stephens, Jeffrey   NaN   NaN 172.0   NaN   NaN   NaN
+       Sullivan, Pat   NaN 218.0   NaN   NaN   NaN   NaN
+
+Means:
+Project       Mean    StdErr
+    SA1 189.625000  5.116282
+    SA6 154.333333 10.778580
+    SA3 153.125000  9.532721
+    SA2 132.875000  6.423833
+    SA5 129.000000  2.449490
+    SA4 113.125000 18.124015
+
+Pair-Wise Winners:
+Project1 Project2      Mean1   StdErr1      Mean2   StdErr2  MeanDiff  StdErrDiff     ZDiff   P1Wins
+     SA1      SA6 189.625000  5.116282 154.333333 10.778580 35.291667   11.931224  2.957925 0.998451
+     SA1      SA3 189.625000  5.116282 153.125000  9.532721 36.500000   10.818924  3.373718 0.999629
+     SA1      SA2 189.625000  5.116282 132.875000  6.423833 56.750000    8.212306  6.910361 1.000000
+     SA1      SA5 189.625000  5.116282 129.000000  2.449490 60.625000    5.672419 10.687680 1.000000
+     SA1      SA4 189.625000  5.116282 113.125000 18.124015 76.500000   18.832319  4.062166 0.999976
+     SA6      SA3 154.333333 10.778580 153.125000  9.532721  1.208333   14.389251  0.083975 0.533462
+     SA6      SA2 154.333333 10.778580 132.875000  6.423833 21.458333   12.547645  1.710148 0.956381
+     SA6      SA5 154.333333 10.778580 129.000000  2.449490 25.333333   11.053406  2.291903 0.989044
+     SA6      SA4 154.333333 10.778580 113.125000 18.124015 41.208333   21.086908  1.954214 0.974662
+     SA3      SA2 153.125000  9.532721 132.875000  6.423833 20.250000   11.495146  1.761613 0.960933
+     SA3      SA5 153.125000  9.532721 129.000000  2.449490 24.125000    9.842396  2.451131 0.992880
+     SA3      SA4 153.125000  9.532721 113.125000 18.124015 40.000000   20.478102  1.953306 0.974608
+     SA2      SA5 132.875000  6.423833 129.000000  2.449490  3.875000    6.875000  0.563636 0.713499
+     SA2      SA4 132.875000  6.423833 113.125000 18.124015 19.750000   19.228768  1.027107 0.847815
+     SA5      SA4 129.000000  2.449490 113.125000 18.124015 15.875000   18.288792  0.868018 0.807308
+
+Same Judge Winners:
+Project1 Project2  NJudges   MeanDiff  StdErrDiff    ZDiff   P1Wins
+     SA6      SA4        3 144.666667   41.280881 3.504447 0.999771
+     SA3      SA4        2  91.000000   91.000000 1.000000 0.841345
+     SA1      SA4        4  88.750000   27.032003 3.283146 0.999487
+     SA1      SA3        3  74.666667   46.819986 1.594761 0.944617
+     SA5      SA4        4  71.500000   34.680686 2.061666 0.980380
+     SA1      SA2        2  63.000000    0.000000      NaN      NaN
+     SA6      SA2        3  52.333333   15.814902 3.309115 0.999532
+     SA1      SA5        4  51.500000    5.838093 8.821373 1.000000
+     SA6      SA3        3  51.333333   63.430627 0.809283 0.790824
+     SA6      SA5        4  36.000000   14.474115 2.487199 0.993562
+     SA3      SA2        3  31.333333    5.547772 5.647913 1.000000
+     SA2      SA4        4  31.250000   39.946579 0.782295 0.782979
+     SA1      SA6        3  30.333333   19.168840 1.582429 0.943224
+     SA5      SA3        3  18.666667   53.511162 0.348837 0.636394
+     SA5      SA2        5   3.000000    6.442049 0.465690 0.679281
+
+
+
+--------------------------------------------------------
+Session: SC
+--------------------------------------------------------
+
+Data:
+               Judge   SC5   SC4   SC1   SC6   SC2
+     Anderson, David 214.0   NaN   NaN   NaN 100.0
+    Bigbee , Anthony 231.0 191.0 149.0 167.0 156.0
+         Camley, Bob 135.0 195.0   NaN 130.0 111.0
+         Cerda, Mark   NaN   NaN 116.0   NaN   NaN
+         Chan, Emily 212.0   NaN 182.0 207.0 130.0
+           Cook, Tom   NaN   NaN   NaN   NaN 140.0
+   DellArio, Michael   NaN 143.0   NaN   NaN   NaN
+        Elam, Debora   NaN 189.0 138.0 157.0 145.0
+     Erickson, Bruce 215.0   NaN   NaN   NaN   NaN
+     Falldorf, Peter 191.0 175.0 135.0 130.0   NaN
+    Furstenau, Julie 169.0   NaN 147.0 112.0   NaN
+      Furstenau, Ron   NaN 163.0   NaN   NaN   NaN
+     Kamionka, Lidia   NaN 262.0   NaN   NaN   NaN
+         Kelley, Tom   NaN   NaN   NaN   NaN 163.0
+        Leupp, David   NaN 167.0 176.0 164.0   NaN
+Reeves-Pepin, Jaclyn 218.0   NaN 224.0 192.0 166.0
+        Ross, Thomas   NaN 130.0   NaN   NaN   NaN
+    Rubin, Dr. Steve   NaN   NaN 163.0  94.0 114.0
+
+Means:
+Project       Mean    StdErr
+    SC5 203.166667  7.896905
+    SC4 174.714286  7.043113
+    SC1 155.714286  6.934092
+    SC6 150.285714 10.398522
+    SC2 137.000000  7.502381
+
+Pair-Wise Winners:
+Project1 Project2      Mean1   StdErr1      Mean2   StdErr2  MeanDiff  StdErrDiff    ZDiff   P1Wins
+     SC5      SC4 203.166667  7.896905 174.714286  7.043113 28.452381   10.581425 2.688899 0.996416
+     SC5      SC1 203.166667  7.896905 155.714286  6.934092 47.452381   10.509174 4.515329 0.999997
+     SC5      SC6 203.166667  7.896905 150.285714 10.398522 52.880952   13.057196 4.049947 0.999974
+     SC5      SC2 203.166667  7.896905 137.000000  7.502381 66.166667   10.892512 6.074509 1.000000
+     SC4      SC1 174.714286  7.043113 155.714286  6.934092 19.000000    9.883677 1.922361 0.972720
+     SC4      SC6 174.714286  7.043113 150.285714 10.398522 24.428571   12.559247 1.945067 0.974117
+     SC4      SC2 174.714286  7.043113 137.000000  7.502381 37.714286   10.290343 3.665017 0.999876
+     SC1      SC6 155.714286  6.934092 150.285714 10.398522  5.428571   12.498435 0.434340 0.667979
+     SC1      SC2 155.714286  6.934092 137.000000  7.502381 18.714286   10.216034 1.831854 0.966513
+     SC6      SC2 150.285714 10.398522 137.000000  7.502381 13.285714   12.822440 1.036130 0.849929
+
+Same Judge Winners:
+Project1 Project2  NJudges  MeanDiff  StdErrDiff    ZDiff   P1Wins
+     SC5      SC2        5 69.400000   15.071828 4.604617 0.999998
+     SC4      SC2        3 54.333333   15.059143 3.607996 0.999846
+     SC5      SC1        5 36.800000   15.014660 2.450938 0.992876
+     SC5      SC6        6 36.333333   11.359773 3.198421 0.999309
+     SC4      SC6        5 33.800000   10.360502 3.262390 0.999448
+     SC4      SC1        4 31.000000   13.546217 2.288462 0.988945
+     SC1      SC2        5 29.000000   14.768209 1.963678 0.975216
+     SC6      SC2        6 20.833333   12.944540 1.609430 0.946239
+     SC1      SC6        8 11.375000   11.537110 0.985949 0.837921
+     SC4      SC5        3  1.333333   30.140412 0.044237 0.517642
+
+
+
+--------------------------------------------------------
+Session: SD
+--------------------------------------------------------
+
+Data:
+              Judge   SD4   SD3   SD2
+    Anderson, David 141.0   NaN   NaN
+   Bigbee , Anthony 193.0 186.0   NaN
+        Chan, Emily   NaN 203.0   NaN
+   Creighton, Chris   NaN 173.0 144.0
+    Erickson, Bruce 191.0   NaN   NaN
+   Furstenau, Julie   NaN   NaN 198.0
+     Furstenau, Ron   NaN   NaN 170.0
+     Heinrich, Mark   NaN 224.0   NaN
+      Ho, Derek 179   NaN   NaN   NaN
+Hollenbeck, Patrick 216.0   NaN   NaN
+    Kamionka, Lidia   NaN   NaN 228.0
+      Kasley, Kathy   NaN   NaN 172.0
+         Kent, Chip 227.0 141.0 182.0
+    Lazzari, Jeremy   NaN   NaN 137.0
+   LeMaster, Edward   NaN   NaN 105.0
+       Leupp, David 153.0 197.0   NaN
+     Morgan, Thomas   NaN   NaN 154.0
+    Reddan, Charles 188.0 150.0   NaN
+   Rubin, Dr. Steve   NaN 182.0   NaN
+       Ruddy, Joyce   NaN   NaN 124.0
+
+Means:
+Project       Mean    StdErr
+    SD4 188.200000 10.106434
+    SD3 181.833333  7.717585
+    SD2 160.125000  8.751403
+
+Pair-Wise Winners:
+Project1 Project2      Mean1   StdErr1      Mean2  StdErr2  MeanDiff  StdErrDiff    ZDiff   P1Wins
+     SD4      SD3 188.200000 10.106434 181.833333 7.717585  6.366667   12.716175 0.500675 0.691700
+     SD4      SD2 188.200000 10.106434 160.125000 8.751403 28.075000   13.368884 2.100026 0.982137
+     SD3      SD2 181.833333  7.717585 160.125000 8.751403 21.708333   11.668255 1.860461 0.968590
+
+Same Judge Winners:
+Project1 Project2  NJudges  MeanDiff  StdErrDiff    ZDiff   P1Wins
+     SD4      SD2        1     45.00         NaN      NaN      NaN
+     SD4      SD3        4     21.75   27.283618 0.797182 0.787327
+     SD2      SD3        2      6.00   35.000000 0.171429 0.568057
