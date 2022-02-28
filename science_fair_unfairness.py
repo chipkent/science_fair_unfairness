@@ -103,6 +103,7 @@ def analyze_pair_wise_means(means:pandas.DataFrame) -> pandas.DataFrame:
         })
 
 def analyze_same_judge(df:pandas.DataFrame) -> pandas.DataFrame:
+    """Analyze judges that scored pairs of projects to see who they pick as winners."""
     project1 = []
     project2 = []
     n_judges = []
@@ -164,6 +165,7 @@ def analyze_same_judge(df:pandas.DataFrame) -> pandas.DataFrame:
 
 
 def analyze_session(session:str, df:pandas.DataFrame) -> None:
+    """Analyze a science fair session."""
     print("\n\n")
     print("--------------------------------------------------------")
     print(f"Session: {session}")
@@ -183,9 +185,20 @@ def analyze_session(session:str, df:pandas.DataFrame) -> None:
     same_judge = analyze_same_judge(df)
     print(same_judge)
 
+def header() -> str:
+    print("\n\n")
+    print("--------------------------------------------------------")
+    print(f"Data Description")
+    print("--------------------------------------------------------")
+    print("Data - Raw judging data")
+    print("Means - Mean scores and standard errors per project")
+    print("Pair-Wise Winners - Predict odds of a project winning based on the means and standard errors of scores")
+    print("Same-Judge Winners - Predict odds of a project winning based on judges that scored both projects.")
 
 sessions = ["JA", "JB", "JC", "JD", "SA", "SC", "SD"]
 data = load_sessions(sessions)
+
+header()
 
 for session, df in data.items():
     analyze_session(session, df)
