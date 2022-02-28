@@ -171,19 +171,19 @@ def analyze_session(session:str, df:pandas.DataFrame) -> None:
     print(f"Session: {session}")
     print("--------------------------------------------------------")
     print("\nData:")
-    print(df)
+    print(df.to_string(index=False))
 
     print("\nMeans:")
     means = compute_means(df)
-    print(means)
+    print(means.to_string(index=False))
 
     print("\nPair-Wise Winners:")
     pair_wise = analyze_pair_wise_means(means)
-    print(pair_wise)
+    print(pair_wise.to_string(index=False))
 
     print("\nSame Judge Winners:")
     same_judge = analyze_same_judge(df)
-    print(same_judge)
+    print(same_judge.to_string(index=False))
 
 def header() -> str:
     print("\n\n")
