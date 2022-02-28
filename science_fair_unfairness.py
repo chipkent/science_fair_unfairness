@@ -65,7 +65,7 @@ def analyze_pair_wise_means(means:pandas.DataFrame) -> pandas.DataFrame:
         m1 = means["Mean"][i]
         s1 = means["StdErr"][i]
 
-        for j in range(len(means)):
+        for j in range(i,len(means)):
             p2 = means["Project"][j]
             m2 = means["Mean"][j]
             s2 = means["StdErr"][j]
@@ -105,6 +105,7 @@ def analyze_pair_wise_means(means:pandas.DataFrame) -> pandas.DataFrame:
 def analyze_same_judge(df:pandas.DataFrame) -> pandas.DataFrame:
     project1 = []
     project2 = []
+    n_judges = []
     mean_diff = []
     ste_diff = []
     z_diff = []
@@ -128,13 +129,19 @@ def analyze_same_judge(df:pandas.DataFrame) -> pandas.DataFrame:
                 p = np.nan
             else:
                 s = scipy.stats.sem(diffs)
-                z = m/s
-                p = scipy.stats.norm.sf(-z)
+
+                if s == 0: 
+                    z = np.nan
+                    p = np.nan
+                else:
+                    z = m/s
+                    p = scipy.stats.norm.sf(-z)
 
             # print(f"{c1} {c2} {diffs} {m} {s} {z} {p}")
 
             project1.append(c1)
             project2.append(c2)
+            n_judges.append(len(diffs))
             mean_diff.append(m)
             ste_diff.append(s)
             z_diff.append(z)
@@ -144,6 +151,7 @@ def analyze_same_judge(df:pandas.DataFrame) -> pandas.DataFrame:
     df = pandas.DataFrame({
         "Project1":project1, 
         "Project2":project2, 
+        "NJudges": n_judges,
         "MeanDiff":mean_diff, 
         "StdErrDiff":ste_diff, 
         "ZDiff":z_diff,
@@ -151,6 +159,7 @@ def analyze_same_judge(df:pandas.DataFrame) -> pandas.DataFrame:
         })
 
     df = df.sort_values(by=['MeanDiff'], ascending=False)
+    df = df[df['MeanDiff'] > 0]
     return df
 
 
@@ -170,7 +179,7 @@ def analyze_session(session:str, df:pandas.DataFrame) -> None:
     pair_wise = analyze_pair_wise_means(means)
     print(pair_wise)
 
-    print("\nSame Judge:")
+    print("\nSame Judge Winners:")
     same_judge = analyze_same_judge(df)
     print(same_judge)
 
