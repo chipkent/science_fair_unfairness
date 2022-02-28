@@ -10,7 +10,7 @@ This project analyzes the judging scores from the first stage to determine the o
 # Install
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 # Run
